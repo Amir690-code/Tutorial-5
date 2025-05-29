@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to UniMAP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>UNIVERSITY MALAYSIA PERLIS</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="faculties.html">Faculties</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://www.unimap.edu.my/" target="_blank">Official UniMAP</a>
+  </nav>
+
+  <div class="slider">
+    <img src="image/slide1.JPG" class="active" />
+    <img src="image/slide2.jpg" class="active" />
+    <img src="image/slide3.JPG" class="active" />
+  </div>
+
+  <section>
+    <h2>Welcome to Universiti Malaysia Perlis</h2>
+    <p>UniMAP is a technical university in Malaysia offering a variety of engineering and technology programs.</p>
+    <video controls>
+      <source src="image/unimap_video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <footer>
+    &copy; 2025 Universiti Malaysia Perlis (UniMAP)
+  </footer>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slider img');
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000);
+  </script>
+
+  <body>
+  <nav>
+    <a href="#about">about</a>
+    <a href="#video">Watch Video</a>
+    <a href="#contact">Contact Info</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to University Malaysia Perlis</h2>
+    <p>UniMAP is a technical university in Malaysia offering a variety of engineering and technology programs.</p>
+  </section>
+
+  <section id="video">
+    <h2>Our Promo Video</h2>
+    <video controls>
+      <source src="media/unimap_video.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@unimap.edu.my</p>
+  </section>
+</body>
+</body>
+</html>
+
